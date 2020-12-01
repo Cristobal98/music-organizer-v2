@@ -96,6 +96,9 @@ public class MusicOrganizer
             if (filename.contains(searchString)){
                 System.out.println(filename);
             }
+            else {
+                System.out.println("No hay resultados");
+            }
         }
     }
 }
