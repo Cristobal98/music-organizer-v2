@@ -92,13 +92,16 @@ public class MusicOrganizer
     }
     
     public void listMatching(String searchString) {
+        boolean comprobar = true;
         for (String filename : files) {
-            if (filename.contains(searchString)){
+            comprobar = filename.contains(searchString);
+            if (filename.contains(searchString)){                
                 System.out.println(filename);
             }
-            else {
-                System.out.println("No hay resultados");
-            }
+        }
+        
+        if (comprobar == false){
+            System.out.println("No existe ninguna cancion con " + searchString);
         }
     }
     
