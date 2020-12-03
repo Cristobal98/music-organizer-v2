@@ -92,10 +92,10 @@ public class MusicOrganizer
     }
     
     public void listMatching(String searchString) {
-        boolean comprobar = true;
+        boolean comprobar = false;
         for (String filename : files) {
-            comprobar = filename.contains(searchString);
-            if (filename.contains(searchString)){                
+            if (filename.contains(searchString)){    
+                comprobar = true;
                 System.out.println(filename);
             }
         }
