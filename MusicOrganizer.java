@@ -85,9 +85,10 @@ public class MusicOrganizer
     
     public void listAllFiles(){
         int position = 0;
-        for (String filename : files){
-            position += 1;
-            System.out.println(position + ". " +filename);
+        while (position < files.size()){
+            String filename = files.get(position);
+            System.out.println(filename);
+            position ++;
         }
     }
     
@@ -112,4 +113,15 @@ public class MusicOrganizer
             }
         }
     }
+    
+    /** Prueba de ejercicio que no funciona
+     * 
+    public void deleteSongsWithText(String cancion){
+        for (String filename : files) {
+            if (filename.contains(cancion)){    
+                files.remove(filename);
+            }
+        }
+    }
+    */
 }
