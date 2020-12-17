@@ -123,7 +123,7 @@ public class MusicOrganizer
             if (filename.contains(searchString)){
                 existe = false;
                 valor = index;
-                index++;
+                index = files.size();
             }
             else{
                 index++;
