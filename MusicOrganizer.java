@@ -118,12 +118,11 @@ public class MusicOrganizer
         boolean existe = true;
         int index = 0;
         int valor = 0;
-        while (index < files.size()) {
+        while (index < files.size() && existe) {
             String filename = files.get(index);
             if (filename.contains(searchString)){
                 existe = false;
                 valor = index;
-                index = files.size();
             }
             else{
                 index++;
