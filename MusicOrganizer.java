@@ -115,20 +115,21 @@ public class MusicOrganizer
     }
     
     public int findFirst(String searchString){
-        boolean existe = false;
-        int indice = 0;
+        boolean existe = true;
+        int index = 0;
         int valor = 0;
-        for (String filename : files) {
+        while (index < files.size() && existe) {
+            String filename = files.get(index);
             if (filename.contains(searchString)){
-                existe = true;
-                valor = indice;
+                existe = false;
+                valor = index;
             }
             else{
-                indice++;
+                index++;
             }
         }
         
-        if (existe == false){
+        if (existe == true){
             valor = -1;
         }
         
