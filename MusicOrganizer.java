@@ -114,6 +114,27 @@ public class MusicOrganizer
         }
     }
     
+    public int findFirst(String searchString){
+        boolean existe = false;
+        int indice = 0;
+        int valor = 0;
+        for (String filename : files) {
+            if (filename.contains(searchString)){
+                existe = true;
+                valor = indice;
+            }
+            else{
+                indice++;
+            }
+        }
+        
+        if (existe == false){
+            valor = -1;
+        }
+        
+        return valor;
+    }
+    
     /** Prueba de ejercicio que no funciona
      * 
     public void deleteSongsWithText(String cancion){
